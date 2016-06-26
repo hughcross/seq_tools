@@ -33,7 +33,7 @@ If you run either of these, you should get a new file with nine sequences.
 
 **Note on sequence ids**
 
-Each sequence id should include everything after the ">" but before the space. 
+Each sequence id should include everything after the ">" but *before* the space. 
 
 For example, to obtain a sequence that reads like this:
 
@@ -43,3 +43,6 @@ you list it as:
 
 MA_1
 
+**For use with iPython**
+
+I often use this tool within iPython or Jupyter Notebook. You could import the function 'extract_seqs' from this file to use interactively. 

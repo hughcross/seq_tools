@@ -2,7 +2,6 @@
 
 import sys
 import argparse
-#from collections import OrderedDict
 from Bio import SeqIO
 
 parser = argparse.ArgumentParser(description='extract sequences from a list of IDs')
@@ -30,7 +29,7 @@ def make_list(file_list):
         new_list.append(line)
     return new_list
 
-def massive_extract_seqs(seq_set, seq_file_name, new_filename='extracted'):
+def extract_seqs(seq_set, seq_file_name, new_filename='extracted'):
     """allows iteration over many take input list of sequence ids and extract them from input filename to new fasta file"""
     if new_filename == 'extracted':
         new_name = 'extracted_'+seq_file_name
@@ -50,10 +49,10 @@ seq_set = set(seqlist)
 
 if args.output:
 
-    massive_extract_seqs(seq_set, infile, outseq)
+    extract_seqs(seq_set, infile, outseq)
 
 else:
-    massive_extract_seqs(seq_set, infile)
+    extract_seqs(seq_set, infile)
 
 print("all done")
 
