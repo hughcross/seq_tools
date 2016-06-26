@@ -48,6 +48,7 @@ MA_1
 I often use this tool within iPython or Jupyter Notebook. You could import the function 'extract_seqs' from this file to use interactively. 
 
   
+  
 ## revcomp.py
 
 **Get the reverse complement of a fasta file or a single sequence**
@@ -71,7 +72,9 @@ Or
 **for a single sequence**
 
 `revcomp.py`
+
 *you are prompted to enter sequence:*
+
 `enter sequence to reverse complement:`
 
 *you enter*
