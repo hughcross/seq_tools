@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sequence Tools
 Some basic tools in python for sequence manipulation
 
@@ -23,11 +22,11 @@ I have used this script to extract sequences from very massive files (up to 15 G
 
 Here is an example usage, using the included files:
 
-'seq_extractor.py -l example_sequence_list.txt -s example_sequences.fa'
+`seq_extractor.py -l example_sequence_list.txt -s example_sequences.fa`
 
 or, to add a name for the new file:
 
-'seq_extractor.py -l example_sequence_list.txt -s example_sequences.fa -o new_subset.fa'
+`seq_extractor.py -l example_sequence_list.txt -s example_sequences.fa -o new_subset.fa`
 
 If you run either of these, you should get a new file with nine sequences. 
 
@@ -38,9 +37,9 @@ Each sequence id should include everything after the ">" but before the space.
 
 For example, to obtain a sequence that reads like this:
 
-'>MA_1 len=89935'
+>MA_1 len=89935
 
 you list it as:
 
-'MA_1'
+MA_1
 
