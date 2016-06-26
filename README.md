@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sequence Tools
 Some basic tools in python for sequence manipulation
 
