@@ -46,3 +46,38 @@ MA_1
 **For use with iPython**
 
 I often use this tool within iPython or Jupyter Notebook. You could import the function 'extract_seqs' from this file to use interactively. 
+
+  
+## revcomp.py
+
+**Get the reverse complement of a fasta file or a single sequence**
+
+Software prerequisite:
+
+* Biopython https://github.com/biopython/biopython.github.io/
+
+**Description**
+
+This script will return the reverse complement of the file or sequence that you input. For a file, use the '-i' sequence input argument, and optionally the '-o' for the name of the new reverse-complemented file. If you want to just reverse complement a single sequence (such as a primer or other short sequence), do not use any input arguments, and you will be prompted to paste in a sequence. 
+
+Like so:
+
+`revcomp.py -i example_sequences.fa -o testout.fa`
+
+Or
+
+`revcomp.py -i example_sequences.fa`
+  
+**for a single sequence**
+
+`revcomp.py`
+*you are prompted to enter sequence:*
+`enter sequence to reverse complement:`
+
+*you enter*
+`AAATTTGGCGT`
+
+*you can copy the response*
+
+`reverse complement is: ACGCCAAATTT`
+
