@@ -77,10 +77,49 @@ Or
 
 `enter sequence to reverse complement:`
 
-*you enter*
+*you enter, for example*
+
 `AAATTTGGCGT`
 
-*you can copy the response*
+*you get the reverese complement response:*
 
 `reverse complement is: ACGCCAAATTT`
 
+## seq_name_changer.py
+
+**Rename sequences in fasta or fastq file**
+
+**Description**
+
+This script has various options for renaming sequences, including adding a new tag to beginning or end of file, as well as formatting paired end sequences for many programs where specific naming is recommended or required. The program will detect whether it is fasta or fastq.
+
+For typical usage, if you want to add a prefix to each sequence:
+
+`seq_name_changer.py -i example_sequences.fa -o example_out.fa -p spruce-scaffold:`
+
+original sequence:
+
+\>MA_1 len=89935
+
+will be converted to
+
+\>spruce-scaffold:MA_1 len=89935
+
+
+For applications where you need to rename paired end RNAseq sequences to conform to specific applications, where each sequence name requires a '/1' for left or forward reads, and '/2' for right or reverse reads:
+
+`seq_name_changer.py -i example_sequences.fa -o example_pe_1.fa -f fwd`
+
+all sequences will be renamed as such:
+
+\>MA_1/1
+
+You can add both prefixes and suffixes:
+
+`seq_name_changer.py -i example_sequences.fa -o example_pe_1.fa -p spruce-scaffold: -s :paired-end -f fwd`
+
+Will give you:
+
+\>spruce-scaffold:MA_1:paired-end/1
+
+*Remember that apart from the /1 and /2 each pair should have the same name!*
