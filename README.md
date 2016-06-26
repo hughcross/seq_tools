@@ -37,7 +37,7 @@ Each sequence id should include everything after the ">" but before the space.
 
 For example, to obtain a sequence that reads like this:
 
->MA_1 len=89935
+\>MA_1 len=89935
 
 you list it as:
 
