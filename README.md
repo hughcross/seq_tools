@@ -43,10 +43,6 @@ you list it as:
 
 MA_1
 
-**For use with iPython**
-
-I often use this tool within iPython or Jupyter Notebook. You could import the function 'extract_seqs' from this file to use interactively. 
-
   
   
 ## revcomp.py
