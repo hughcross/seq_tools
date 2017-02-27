@@ -3,7 +3,8 @@
 import sys
 import argparse
 from Bio import SeqIO
-import seq_functions.seq_funcs
+# changed calling the function to work better with symbolic links
+from seq_functions.seq_funcs import *
 
 parser = argparse.ArgumentParser(description='extract sequences from a list of IDs')
 
@@ -28,10 +29,10 @@ seq_set = set(seqlist)
 
 if args.output:
 
-    seq_funcs.extract_seqs(seq_set, infile, outseq)
+    extract_seqs(seq_set, infile, outseq)
 
 else:
-    seq_funcs.extract_seqs(seq_set, infile)
+    extract_seqs(seq_set, infile)
 
 print("all done")
 

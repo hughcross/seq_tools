@@ -15,7 +15,7 @@ parser.add_argument('-i', '--sequence_file', dest='seqfile',
     type=str,
     help="name of input sequence file")
 parser.add_argument('-o', '--output', dest='output', 
-    type=str, help="output file name for reverse complemented sequences")
+    type=str, help="output file name for reverse complemented sequences (optional)")
 
 args = parser.parse_args()
 infile = args.seqfile
