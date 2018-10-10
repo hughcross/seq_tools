@@ -119,3 +119,5 @@ Will give you:
 \>spruce-scaffold:MA_1:paired-end/1
 
 *Remember that apart from the /1 and /2 each pair should have the same name!*
+
+
