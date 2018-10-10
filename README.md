@@ -31,7 +31,7 @@ or, to add a name for the new file:
 If you run either of these, you should get a new file with nine sequences. 
 
 
-**Note on sequence ids**
+Note on sequence ids
 
 Each sequence id should include everything after the ">" but *before* the space. 
 
@@ -120,4 +120,4 @@ Will give you:
 
 *Remember that apart from the /1 and /2 each pair should have the same name!*
 
-
+## New Heading
