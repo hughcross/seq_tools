@@ -51,7 +51,7 @@ MA_1
 
 Software prerequisite:
 
-* Biopython https://github.com/biopython/biopython.github.io/
+* Biopython https://biopython.org/
 
 **Description**
 
