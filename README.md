@@ -10,7 +10,7 @@ Following are a few simple tools that I have found to be useful for my bioinform
 
 Software prerequisite:
 
-* Biopython https://github.com/biopython/biopython.github.io/
+* Biopython https://biopython.org/
 
 **Description**
 
