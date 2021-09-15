@@ -4,9 +4,9 @@ import argparse
 import sys
 from Bio.Seq import reverse_complement
 from Bio import SeqIO
-from StringIO import StringIO
+from io import StringIO
 from Bio.SeqRecord import SeqRecord
-from Bio.Alphabet import IUPAC
+#from Bio.Alphabet import IUPAC
 from Bio.Seq import Seq
 
 
@@ -32,13 +32,13 @@ if args.seqfile:
 	    rec_id = str(seq.id)
 	    rec_seq = seq.seq
 	    rev = str(reverse_complement(rec_seq))
-	    new = SeqRecord(Seq(rev, IUPAC.unambiguous_dna), id=rec_id, description='')
+	    new = SeqRecord(Seq(rev), id=rec_id, description='')
 	    
 	    SeqIO.write(new, outfile, 'fasta')
 	    
 else:
-	DNAseq = raw_input("enter sequence to reverse complement: ")
+	DNAseq = input("enter sequence to reverse complement: ")
 	from Bio.Seq import reverse_complement
 	RCseq = reverse_complement(DNAseq)
-	print 'reverse complement is: '+RCseq
+	print('reverse complement is: ',RCseq)
 
