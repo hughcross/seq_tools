@@ -15,13 +15,19 @@ parser.add_argument('-o', '--output', dest='output',
     type=str, help="file name for extracted sequences (optional)")
 parser.add_argument('-l', '--listfile', dest='listing', 
     type=str, help="file listing seq IDs to extract (one per line)")
+parser.add_argument('-q', '--fastq', dest='fastq', action='store_true', 
+    help="add -q or --fastq arg is file is fastq (default fasta)")
 
 args = parser.parse_args()
 infile = args.seqfile
 outseq = args.output
 listfile = args.listing
+fastqfmt = args.fastq
 
-
+if args.fastq:
+    seqtype = 'fastq'
+else:
+    seqtype = 'fasta'
 
 seqlist = make_list(listfile)
 
@@ -29,10 +35,10 @@ seq_set = set(seqlist)
 
 if args.output:
 
-    extract_seqs(seq_set, infile, outseq)
+    extract_seqs(seq_set, infile, seqtype, outseq)
 
 else:
-    extract_seqs(seq_set, infile)
+    extract_seqs(seq_set, infile, seqtype)
 
 print("all done")
 

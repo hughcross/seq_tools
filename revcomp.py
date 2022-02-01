@@ -4,10 +4,13 @@ import argparse
 import sys
 from Bio.Seq import reverse_complement
 from Bio import SeqIO
+<<<<<<< HEAD
 #from StringIO import StringIO
+=======
+>>>>>>> 16e5ece7e8c06b86512c0424c7533b781bbc8a7e
 from io import StringIO
 from Bio.SeqRecord import SeqRecord
-from Bio.Alphabet import IUPAC
+#from Bio.Alphabet import IUPAC
 from Bio.Seq import Seq
 
 
@@ -33,7 +36,7 @@ if args.seqfile:
 	    rec_id = str(seq.id)
 	    rec_seq = seq.seq
 	    rev = str(reverse_complement(rec_seq))
-	    new = SeqRecord(Seq(rev, IUPAC.unambiguous_dna), id=rec_id, description='')
+	    new = SeqRecord(Seq(rev), id=rec_id, description='')
 	    
 	    SeqIO.write(new, outfile, 'fasta')
 	    
